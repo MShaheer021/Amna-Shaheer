@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="range" class="rangeinp" min="0" max="400">
+    <input type="color" class="colorinp" min="0" max="400">
+    <div class="box"></div>
+
+    <script>
+        let box= document.querySelector('.box')
+        let input1= document.querySelector('.rangeinp')
+        let input2= document.querySelector('.colorinp')
+        input2.addEventListener('input',function(){
+
+            let inputValue2= input2.value
+            console.log(inputValue2);
+            box.style.backgroundColor= inputValue2
+        })
+        input1.addEventListener('input',function(){
+            let inputValue= input1.value
+            console.log(inputValue);
+
+            box.style.height= `${inputValue}px`
+
+
+
+        })
+
+
+
+    </script>
+
+
+</body>
+</html>
